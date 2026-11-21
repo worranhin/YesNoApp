@@ -13,7 +13,11 @@ import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
     primary = YesGreen,
+    onPrimary = Color.White,
     secondary = NoRed,
+    onSecondary = Color.White,
+    tertiary = IdlePurple,
+    onTertiary = Color.White,
     background = DarkBackground,
     surface = DarkSurface,
     onBackground = Color.White,
@@ -22,7 +26,11 @@ private val DarkColorScheme = darkColorScheme(
 
 private val LightColorScheme = lightColorScheme(
     primary = YesGreen,
+    onPrimary = Color.White,
     secondary = NoRed,
+    onSecondary = Color.White,
+    tertiary = IdlePurple,
+    onTertiary = Color.White,
     background = LightBackground,
     surface = LightSurface,
     onBackground = Color.Black,
@@ -32,6 +40,7 @@ private val LightColorScheme = lightColorScheme(
 @Composable
 fun YesOrNoTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
+    // 动态色会随壁纸改变，破坏「马卡龙三色」的品牌一致性，因此有意关闭
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {

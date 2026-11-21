@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Yes Or No</string>
+    <string name="tap_hint">轻触屏幕</string>
 </resources>
